@@ -1,0 +1,335 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body {
+background-color: #edebf5;
+ color: #252b4a;
+ overflow-x: hidden;
+}
+
+#menu_icon {
+  display: none;
+}
+
+#phone_menu {
+
+}
+
+#main_header {
+  margin-bottom: 0.8rem;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: bold;
+  color: #252b4a;
+}
+
+/*start of uiverse.io*/
+
+/*    font-family: 'Indie Flower', cursive;*/
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 320px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #0c0c42;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+/*     display: flex;
+    align-items: center; */
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
+
+  
+
+  /*end of uiverse.io*/
+
+  #main_nav {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    padding-inline: calc(0.7rem + 1vw);
+    align-items: center;
+    background-color: #eff28d;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 1;
+
+  }
+
+  #main_nav>div>a:not(#show_favourites) {
+    margin-left: 1rem;
+  }
+
+  .container {
+    text-align: center;
+    padding-top: 2rem;
+    position: relative;
+    top: 4rem;
+  }
+
+  #logo {
+    color: #4561ed;
+  }
+
+  #search_form {
+    margin-inline: auto;
+  }
+
+  #search_field {
+
+  }
+
+  #search_btn {
+    border: 1px solid #252b4a;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    margin-top: 0.8em;
+  }
+
+  #search_btn:hover {
+    cursor: pointer;
+  }
+
+  #categories_container {
+    position: fixed;
+    right: 0px;
+    top: 4rem;
+    text-align: start;
+    height: calc(100vh - 4rem); 
+    width: 280px;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: rgb(79, 105, 144);
+    color: rgb(247, 247, 121);
+    z-index: 1;
+    display: none;
+  }
+
+  #x {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  #x:hover {
+    cursor: pointer;
+  }
+
+  #jobs_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 150px;
+    z-index: 0;
+    grid-gap: 0.8rem;
+    width: 80%;
+    margin-inline: auto;
+    padding-bottom: 1rem;
+  }
+
+  .job {
+    border: 1px solid blue;
+    width: 26vw;
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .selected_job {
+    border: 3px solid blue;
+    width: 26vw;
+    padding: 0.7rem;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .tags_container {
+    display: flex;
+    width: 300px;
+  }
+
+  .tag {
+    background-color: #252b4a;
+    color: white;
+    font-size: 10px;
+    margin-left: 0.5em;
+    padding: 0.2em;
+    border-radius: 5px;
+  }
+
+  .visibility {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .title {
+    margin-bottom: 0.5em;
+    min-height: 2.2em;
+    max-height: 2.2em;
+  }
+
+  .heart {
+    height: 1.5rem;
+    width: 170px;
+    display: block;
+    margin-bottom: 0.4rem;
+
+  }
+
+  .description {
+    margin-bottom: 1em;
+  }
+
+  .category {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .type {
+    display: inline-block;
+
+  }
+
+  .link {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+    background-color: #a1a1dd;
+    color:#10103a;
+  }
+
+  @media screen and (max-width: 1200px) {
+    #jobs_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .job, .selected_job {
+      width: 40vw;
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+    #jobs_container {
+      grid-template-columns: 1fr;
+    }
+
+    .job, .selected_job {
+      width: 80vw;
+    }
+
+    #menu_icon {
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    .invisible {
+      display: none;
+    }
+
+    #phone_menu {
+      position: absolute;
+      top: 4rem;
+      right: 0px;
+      flex-direction: column;
+      background-color: aliceblue;
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+      min-height: 200px;
+    }
+
+    #phone_menu>a:hover {
+      font-weight: bold;
+    }
+
+  }

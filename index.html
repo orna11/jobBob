@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./source.js" type="module"></script>
+    <title>jobBob</title>
+</head>
+<body>
+    <nav id="main_nav">
+        <div>
+        <h2 id="logo">JobBob</h2>
+        <a href="#" id="show_favourites">💙My Favourites</a>
+        </div>
+        <div id="phone_menu" class="invisible">
+        <a href="#" id="all_link">All Jobs</a>
+        <a href="#" id="categories_link">Categories</a>
+    </div>
+    <img src="./assets/icons/menu.png" id="menu_icon" alt="">
+    </nav>
+
+    <div id="categories_container"></div>
+
+    <div class="container">
+        <h1 id="main_header">Find the best job for you.</h1>
+        <form class="form" id="search_form">
+            <input class="input" id="search_field" placeholder="Search for jobs" type="text">
+            <div class="tags_container">
+                <span class="tag visibility" data-id="19" value="19">Software Development</span>
+                <span class="tag visibility" data-id="18" value="18">Customer Service</span>
+                <span class="tag visibility" data-id="21" value="21">Design</span>
+                <span class="tag visibility" data-id="28" value="28">Marketing</span>
+                <span class="tag visibility" data-id="30" value="30">Sales</span>
+                <span class="tag visibility" data-id="23" value="23">Product</span>
+                <span class="tag visibility" data-id="33" value="33">Business</span>
+                <span class="tag visibility" data-id="24" value="24">Data</span>
+                <span class="tag visibility" data-id="25" value="25">DevOps / Sysadmin</span>
+                <span class="tag visibility" data-id="26" value="26">Finance / Legal</span>
+                <span class="tag visibility" data-id="27" value="27">Human Resources</span>
+                <span class="tag visibility" data-id="29" value="29">QA</span>
+                <span class="tag visibility" data-id="32" value="32">Writing</span>
+                <span class="tag visibility" data-id="22" value="22">All others</span>
+            </div>
+            <button id="search_btn" type="submit">
+                Search
+            </button>
+        </form>
+    </div>
+    
+    <div id="jobs_container"></div>
+</body>
+</html>
